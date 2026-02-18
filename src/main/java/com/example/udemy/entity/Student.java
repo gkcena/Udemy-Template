@@ -1,4 +1,4 @@
-package com.example.udemy.Entity;
+package com.example.udemy.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
