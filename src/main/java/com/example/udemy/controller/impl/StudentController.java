@@ -5,6 +5,7 @@ import com.example.udemy.dto.DtoStudent;
 import com.example.udemy.dto.DtoStudentIU;
 import com.example.udemy.entity.Student;
 import com.example.udemy.service.IStudentService;
+import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class StudentController implements IStudentController {
 
     @PostMapping(path = "/save")
     @Override
-    public DtoStudent saveStudent(@RequestBody DtoStudentIU dtoStudentIU) {
+    public DtoStudent saveStudent(@RequestBody @Valid DtoStudentIU dtoStudentIU) {
         return studentService.saveStudent(dtoStudentIU);
     }
 
