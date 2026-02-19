@@ -16,11 +16,11 @@ import java.util.Date;
 @AllArgsConstructor
 public class DtoStudentIU { // INSERT- UPDATE İŞLEMLERİ İCİN KULLAN
 
-    @NotEmpty(message = "firstname alanı boş olamaz")
+    @NotEmpty
     @Size(min = 3, max = 20 , message = "Size: 3-20")
     private String firstName;
 
-    @NotEmpty(message = "lastname alanı boş olamaz")
+    @NotEmpty
     @Size(min = 3, max = 20 , message = "Size: 3-20")
     private String lastName;
 
